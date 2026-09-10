@@ -10,14 +10,14 @@
 }:
 
 let
-  version = "1.7.0";
+  version = "1.8.0";
 
   # nixpkgs-update: no auto update
   src = fetchFromGitHub {
     owner = "pop-os";
     repo = "cosmic-app-library";
     tag = "epoch-${version}";
-    hash = "sha256-g77/wMG0e8yMYLnwfOTupJlBOKKGYpsbRNxkjCsCfvY=";
+    hash = "sha256-oAGo8ByFHiSR9J57Ytn9kjMRwu103Retr9VcZjjaTtY=";
   };
 
   xdgen-generate = rustPlatform.buildRustPackage {
@@ -38,7 +38,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   inherit src;
 
-  cargoHash = "sha256-pr90LG3H8hKD1dJAeO4vfLQLlihB7gjwvhlDNHdRTec=";
+  cargoHash = "sha256-UNSoRkHFQ1VpIeF/xMyONpwZ8hG5yUkTWqq/9LQ1wqs=";
 
   separateDebugInfo = true;
   __structuredAttrs = true;
